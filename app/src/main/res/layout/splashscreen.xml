@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/darkBlue"
-    tools:context=".Splashscreen">
+    tools:context=".Splashscreen"
+    tools:ignore="MissingDefaultResource">
 
 
     <ImageView
@@ -17,5 +18,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        margin android:layout_marginRight="20dp"/>
+        android:layout_marginRight="20dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
