@@ -5,4 +5,11 @@
     <string name="pas">Password</string>
     <string name="create_account">Create Account ?</string>
     <string name="masuk">Masuk</string>
+    <string name="hint">Ociiiirrr</string>
+    <string name="eml">Email</string>
+    <string name="signup">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="konfirmasi_Password">Konfirmasi Password</string>
+    <string name="status">Status Kece</string>
+    <string name="daftar">Daftar</string>
 </resources>
