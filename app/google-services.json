@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "154047186630",
+    "firebase_url": "https://rodguild-80667.firebaseio.com",
+    "project_id": "rodguild-80667",
+    "storage_bucket": "rodguild-80667.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:154047186630:android:0d3099a27778200343b9c7",
+        "android_client_info": {
+          "package_name": "com.rod.rodguild"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "154047186630-5h8cdctc1ksl110m1hcj2hn94cvkfi8n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rod.rodguild",
+            "certificate_hash": "7117ca0bdb31913c9c7201ed2a1e1c6fd4018c10"
+          }
+        },
+        {
+          "client_id": "154047186630-tg4f17n4jffom3a2hhqiijsugdk5vqol.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjg91lQaHGWDNdCoiUmxFE9Ih8S5IlMkc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "154047186630-tg4f17n4jffom3a2hhqiijsugdk5vqol.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkBlue"
+    tools:context=".SignUp">
+
+    <ImageView
+        android:id="@+id/base"
+        android:layout_width="302dp"
+        android:layout_height="560dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/shape_semi_dark" />
+
+    <Button
+        android:id="@+id/btn_Daftar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/shape_purple_white"
+        android:text="@string/daftar"
+        app:layout_constraintBottom_toBottomOf="@+id/base"
+        app:layout_constraintEnd_toEndOf="@+id/base"
+        app:layout_constraintStart_toStartOf="@+id/base" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/signup"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/usr"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/base"
+        app:layout_constraintTop_toTopOf="@+id/base" />
+
+    <EditText
+        android:id="@+id/usernameED"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/base"
+        app:layout_constraintStart_toStartOf="@+id/base"
+        app:layout_constraintTop_toBottomOf="@+id/userTV" />
+
+    <TextView
+    android:id="@+id/emailTV"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="30dp"
+    android:layout_marginTop="30dp"
+    android:text="@string/email"
+    android:textColor="@color/white"
+    android:textSize="14sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="@+id/base"
+    app:layout_constraintTop_toBottomOf="@+id/usernameED" />
+
+    <EditText
+        android:id="@+id/emailED"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/white"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/base"
+        app:layout_constraintStart_toStartOf="@+id/base"
+        app:layout_constraintTop_toBottomOf="@id/emailTV" />
+
+    <TextView
+        android:id="@+id/passTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/pas"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/base"
+        app:layout_constraintTop_toBottomOf="@+id/emailED" />
+
+    <EditText
+        android:id="@+id/passwordED"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/base"
+        app:layout_constraintStart_toStartOf="@+id/base"
+        app:layout_constraintTop_toBottomOf="@id/passTV" />
+
+    <TextView
+        android:id="@+id/konfPassTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/konfirmasi_Password"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/base"
+        app:layout_constraintTop_toBottomOf="@+id/passwordED" />
+
+    <EditText
+        android:id="@+id/konfPassED"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/base"
+        app:layout_constraintStart_toStartOf="@+id/base"
+        app:layout_constraintTop_toBottomOf="@id/konfPassTV" />
+
+    <TextView
+        android:id="@+id/statusTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/status"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/base"
+        app:layout_constraintTop_toBottomOf="@id/konfPassED" />
+
+    <EditText
+        android:id="@+id/statusED"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/base"
+        app:layout_constraintStart_toStartOf="@+id/base"
+        app:layout_constraintTop_toBottomOf="@id/statusTV" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:onClick="kembali"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

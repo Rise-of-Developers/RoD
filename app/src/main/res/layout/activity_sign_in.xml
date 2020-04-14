@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkBlue"
+    tools:context=".Sign_In">
+
+    <TextView
+        android:id="@+id/sigin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signin"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:id="@+id/base"
+        android:layout_width="301dp"
+        android:layout_height="419dp"
+        android:src="@drawable/shape_semi_dark"
+        app:layout_constraintTop_toBottomOf="@id/sigin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="95dp"/>
+
+    <ImageView
+        android:id="@+id/circle"
+        android:layout_width="154dp"
+        android:layout_height="154dp"
+        android:src="@drawable/shape_dark"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sigin"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:id="@+id/logoROD"
+        android:layout_width="118dp"
+        android:layout_height="118dp"
+        android:src="@drawable/logo_rod"
+        app:layout_constraintLeft_toLeftOf="@id/circle"
+        app:layout_constraintRight_toRightOf="@id/circle"
+        app:layout_constraintTop_toTopOf="@id/circle"
+        app:layout_constraintBottom_toBottomOf="@id/circle"
+        android:layout_marginRight="2dp"/>
+
+    <TextView
+        android:id="@+id/usr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/usr"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/base"
+        app:layout_constraintLeft_toLeftOf="@id/base"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="130dp"/>
+
+    <EditText
+        android:id="@+id/edt_username"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/white"
+        android:textSize="14sp"
+        android:inputType="textEmailAddress"
+        android:hint="@string/hint"
+        android:textColorHint="@color/darkBlue"
+        app:layout_constraintLeft_toLeftOf="@id/base"
+        app:layout_constraintRight_toRightOf="@id/base"
+        app:layout_constraintTop_toBottomOf="@id/usr"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:paddingBottom="15dp"/>
+
+    <TextView
+        android:id="@+id/pas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pas"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/edt_username"
+        app:layout_constraintLeft_toLeftOf="@id/base"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:id="@+id/edt_password"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/white"
+        android:inputType="textPassword"
+        app:layout_constraintLeft_toLeftOf="@id/base"
+        app:layout_constraintRight_toRightOf="@id/base"
+        app:layout_constraintTop_toBottomOf="@id/pas"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"/>
+
+    <TextView
+
+        android:id="@+id/create_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/create_account"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/edt_password"
+        app:layout_constraintRight_toRightOf="@id/base"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="50dp"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/masuk"
+        android:onClick="masuk"
+                app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/base"
+        android:background="@drawable/shape_purple_white"
+        android:layout_marginLeft="103dp"
+        android:layout_marginRight="103dp"
+        android:layout_marginTop="380dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
