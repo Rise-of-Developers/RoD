@@ -58,7 +58,14 @@ public class Sign_In extends AppCompatActivity {
 
                             //validasi password dengan pas firebase
                             if(localPassword.equals(passwordFromFirebase)){
+
                                 Toast.makeText(getApplicationContext(), "Selamat datang " + localUsername + " Login sukses",Toast.LENGTH_SHORT).show();
+                                // masuk ke menu utama
+                                Intent pindah  = new Intent(Sign_In.this, SecondActivity.class);
+                                startActivity(pindah);
+                                finish();
+
+
                             }else {
                                 Toast.makeText(getApplicationContext(), "Password salah",Toast.LENGTH_SHORT).show();
                             }
