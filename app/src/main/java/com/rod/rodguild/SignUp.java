@@ -72,6 +72,11 @@ public class SignUp extends AppCompatActivity {
                     return;
                 }
 
+                if (localPassword.length() < 6) {
+                    Toast.makeText(getApplicationContext(), "Password too short, enter minimum 6 characters!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 if (TextUtils.isEmpty(localConfirmPass)) {
                     Toast.makeText(getApplicationContext(), "Enter Confirm Password!", Toast.LENGTH_SHORT).show();
                     return;
@@ -109,8 +114,7 @@ public class SignUp extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(), "Password tidak serupa", Toast.LENGTH_SHORT).show();
                             }
                         }
-
-
+                        Toast.makeText(getApplicationContext(), "Berhasil dibuat", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
