@@ -8,18 +8,21 @@ import android.os.Handler;
 
 public class Splashscreen extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.spalsh_screen);
 
-        new Handler().postDelayed(new Runnable() {
+        Handler mhandler = new Handler();
+        mhandler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(Splashscreen.this,Sign_In.class));
+                Intent pindah = new Intent(Splashscreen.this,Sign_In.class);
+                startActivity(pindah);
                 finish();
             }
-        },2000);
+        }, 3000);
     }
 
 
