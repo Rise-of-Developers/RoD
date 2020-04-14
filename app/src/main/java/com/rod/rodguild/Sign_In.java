@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -25,7 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Sign_In extends AppCompatActivity {
 
-    EditText username,password;
+    EditText username, password;
     TextView create_account;
     Button btn_masuk;
     DatabaseReference reference;
@@ -46,33 +47,43 @@ public class Sign_In extends AppCompatActivity {
                 final String localUsername = username.getText().toString();
                 final String localPassword = password.getText().toString();
 
+                if (TextUtils.isEmpty(localUsername)) {
+                    Toast.makeText(getApplicationContext(), "Enter Username!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (TextUtils.isEmpty(localPassword)) {
+                    Toast.makeText(getApplicationContext(), "Enter password!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 reference = FirebaseDatabase.getInstance().getReference().child("Users").child(localUsername);
                 reference.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if (dataSnapshot.exists()){
+                        if (dataSnapshot.exists()) {
 
                             //get Password firebase
                             String passwordFromFirebase = dataSnapshot.child("password").getValue().toString();
 
 
                             //validasi password dengan pas firebase
-                            if(localPassword.equals(passwordFromFirebase)){
+                            if (localPassword.equals(passwordFromFirebase)) {
 
-                                Toast.makeText(getApplicationContext(), "Selamat datang " + localUsername + " Login sukses",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "Selamat datang " + localUsername + " Login sukses", Toast.LENGTH_SHORT).show();
                                 // masuk ke menu utama
-                                Intent pindah  = new Intent(Sign_In.this, SecondActivity.class);
+                                Intent pindah = new Intent(Sign_In.this, SecondActivity.class);
                                 startActivity(pindah);
                                 finish();
 
 
-                            }else {
-                                Toast.makeText(getApplicationContext(), "Password salah",Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(getApplicationContext(), "Password salah", Toast.LENGTH_SHORT).show();
                             }
 
 
-                        }else{
-                            Toast.makeText(getApplicationContext(), "Email tidak ada", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getApplicationContext(), "Username tidak ada", Toast.LENGTH_SHORT).show();
                         }
                     }
 
@@ -87,7 +98,7 @@ public class Sign_In extends AppCompatActivity {
         create_account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent pindah = new Intent(Sign_In.this,SignUp.class );
+                Intent pindah = new Intent(Sign_In.this, SignUp.class);
                 startActivity(pindah);
             }
         });
